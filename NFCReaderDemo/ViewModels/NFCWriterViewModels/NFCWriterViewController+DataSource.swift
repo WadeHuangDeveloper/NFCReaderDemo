@@ -41,6 +41,8 @@ extension NFCWriterViewController {
         if editingStyle == .delete {
             records.remove(at: indexPath.row)
             recordTableView.deleteRows(at: [indexPath], with: .fade)
+            self.recordTableView.setEditing(false, animated: true)
+            self.editBarButtonItem.title = "Edit"
         }
     }
     

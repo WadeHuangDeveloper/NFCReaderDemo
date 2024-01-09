@@ -28,6 +28,7 @@ extension NFCReaderViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! NFCNDEFMessageTableViewCell
         cell.recordCountLabel.text = detectedNFCTagData.message.records.count.description + (detectedNFCTagData.message.records.count > 1 ? " records" : " record")
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
@@ -37,5 +38,16 @@ extension NFCReaderViewController {
         controller.setNFCTagData(detectedNFCTagData)
         controller.setNFCNDEFPayload(detectedNFCTagData.message.records[indexPath.row])
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.detectedNFCTagData = nil
+            self.messageTableView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
 }

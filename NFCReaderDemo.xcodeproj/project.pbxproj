@@ -150,8 +150,6 @@
 				F69BA3CD2B2761B50088B461 /* ViewModels */,
 				F69BA3CC2B2761980088B461 /* Models */,
 				F671E61B2B26111F0020B01D /* NFCReaderDemo.entitlements */,
-				F671E6072B2610F30020B01D /* AppDelegate.swift */,
-				F671E6092B2610F30020B01D /* SceneDelegate.swift */,
 				F671E60D2B2610F30020B01D /* Main.storyboard */,
 				F671E6102B2610F40020B01D /* Assets.xcassets */,
 				F671E6122B2610F40020B01D /* LaunchScreen.storyboard */,
@@ -175,6 +173,8 @@
 		F69BA3CD2B2761B50088B461 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F671E6072B2610F30020B01D /* AppDelegate.swift */,
+				F671E6092B2610F30020B01D /* SceneDelegate.swift */,
 				F62644832B2B3C76006179BA /* NFCReaderViewModels */,
 				F62644852B2B3CC4006179BA /* NFCNDEFPayloadViewModels */,
 				F62644842B2B3C86006179BA /* NFCWriterViewModels */,
